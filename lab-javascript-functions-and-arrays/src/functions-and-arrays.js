@@ -45,10 +45,11 @@ function sumNumbers(numbers) {
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(numbers) {
-  if (array.length === 0) {
+  if (numbers.length === 0) {
     return null;
   }
-  return sumNumbers(numbers) / numbers.length;
+  const average = sumNumbers(numbers) / numbers.length;
+  return average;
 }
 
 // Level 2: Array of strings
@@ -126,6 +127,37 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
+
+function howManyTimes(haystack, needle) {
+  let count = 0;
+  for (let word of haystack) {
+    if (word === needle) {
+      count++
+    }
+  }
+  return count;
+}
+
+// Bonus 3.1: A generic sum function
+
+function sum(array) {
+  let sum = 0;
+  let type;
+  for (let element of array) {
+    type = typeof element;
+    if (type === 'object') throw new Error("Unsupported data type sir or ma'am");
+    if (type === 'string') sum += element.length;
+    else sum += element;
+  }
+  return sum;
+}
+
+// Bonus 4.1: A generic `avg()` function
+
+function avg(array) {
+  if (array.length === 0) return null;
+  return Number((sum(array) / array.length).toFixed(2));
+}
 
 // Iteration #8: Bonus
 
