@@ -33,9 +33,9 @@ dog.age = 5;
 // dog.hobby = 'eating';
 console.log(dog)
 
-// 
-// const input = prompt('which property of the dog you wanna see?')
-// console.log('this is the prop you requested: ', dog)
+// accessing a prop using a variable -> you have to use the braket notation
+const input = prompt('which property of the dog you wanna see?')
+console.log('this is the prop you requested: ', dog[input])
 
 
 
