@@ -112,5 +112,5 @@ const persons = [
 
 // iterate over persons and log every name
 for (let person of persons) {
-    console.log(person)
+    console.log(person.name)
 } 
